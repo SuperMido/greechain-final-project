@@ -2,17 +2,17 @@ pragma solidity ^0.4.23;
 import "./SupplyChainStorage.sol";
 import "./Ownable.sol";
 
-contract SupplyChainUser is Ownable {
+contract SupplyChainUserAddress is Ownable {
     /*Events*/
-    event UserUpdate(
-        address indexed user,
+    event UserAddressUpdate(
+        address indexed userAddress,
         string name,
         string contactNo,
-        string role,
+        string UserRole,
         bool isActive,
         string profileHash
     );
-    event UserRoleUpdate(address indexed user, string role);
+    event UserAddressUserRoleUpdate(address indexed userAddress, string UserRole);
 
     /* Storage Variables */
     SupplyChainStorage supplyChainStorage;
@@ -21,94 +21,94 @@ contract SupplyChainUser is Ownable {
         supplyChainStorage = SupplyChainStorage(_supplyChainAddress);
     }
 
-    /* Create/Update User */
+    /* Create/Update UserAddress */
 
-    function updateUser(
-        string _name,
+    function updateUserAddress(
+        string _userName,
         string _contactNo,
-        string _role,
+        string _UserRole,
         bool _isActive,
         string _profileHash
     ) public returns (bool) {
         require(msg.sender != address(0));
 
         /* Call Storage Contract */
-        bool status = supplyChainStorage.setUser(
+        bool status = supplyChainStorage.setUserAddress(
             msg.sender,
-            _name,
+            _userName,
             _contactNo,
-            _role,
+            _UserRole,
             _isActive,
             _profileHash
         );
 
         /*call event*/
-        emit UserUpdate(
+        emit UserAddressUpdate(
             msg.sender,
-            _name,
+            _userName,
             _contactNo,
-            _role,
+            _UserRole,
             _isActive,
             _profileHash
         );
-        emit UserRoleUpdate(msg.sender, _role);
+        emit UserAddressUserRoleUpdate(msg.sender, _UserRole);
 
         return status;
     }
 
-    /* Create/Update User For Admin  */
-    function updateUserForAdmin(
-        address _userAddress,
-        string _name,
+    /* Create/Update UserAddress For Admin  */
+    function updateUserAddressForAdmin(
+        address _userAddressAddress,
+        string _userName,
         string _contactNo,
-        string _role,
+        string _UserRole,
         bool _isActive,
         string _profileHash
     ) public onlyOwner returns (bool) {
-        require(_userAddress != address(0));
+        require(_userAddressAddress != address(0));
 
         /* Call Storage Contract */
-        bool status = supplyChainStorage.setUser(
-            _userAddress,
-            _name,
+        bool status = supplyChainStorage.setUserAddress(
+            _userAddressAddress,
+            _userName,
             _contactNo,
-            _role,
+            _UserRole,
             _isActive,
             _profileHash
         );
 
         /*call event*/
-        emit UserUpdate(
-            _userAddress,
-            _name,
+        emit UserAddressUpdate(
+            _userAddressAddress,
+            _userName,
             _contactNo,
-            _role,
+            _UserRole,
             _isActive,
             _profileHash
         );
-        emit UserRoleUpdate(_userAddress, _role);
+        emit UserAddressUserRoleUpdate(_userAddressAddress, _UserRole);
 
         return status;
     }
 
-    /* get User */
-    function getUser(address _userAddress)
+    /* get UserAddress */
+    function getUserAddress(address _userAddressAddress)
         public
         view
         returns (
             string name,
             string contactNo,
-            string role,
+            string UserRole,
             bool isActive,
             string profileHash
         )
     {
-        require(_userAddress != address(0));
+        require(_userAddressAddress != address(0));
 
         /*Getting value from struct*/
-        (name, contactNo, role, isActive, profileHash) = supplyChainStorage
-            .getUser(_userAddress);
+        (name, contactNo, UserRole, isActive, profileHash) = supplyChainStorage
+            .getUserAddress(_userAddressAddress);
 
-        return (name, contactNo, role, isActive, profileHash);
+        return (name, contactNo, UserRole, isActive, profileHash);
     }
 }
