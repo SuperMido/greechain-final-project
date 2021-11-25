@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
+
+/*Theme Colors*/
+/*bootstrap Color*/
+/*Normal Color*/
+/*Border radius*/
+/*Preloader*/
+.preloader {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: fixed;
+  z-index: 99999;
+  background: #fff;
+}
+.preloader .cssload-speeding-wheel {
+  position: absolute;
+  top: calc(50% - 3.5px);
+  left: calc(50% - 3.5px);
+}
+/* This is for popins font for firefox */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/*Just change your choise color here its theme Colors*/
+body {
+  background: #fff;
+}
+/*Top Header Part*/
+.logo i {
+  color: #ffffff;
+}
+.navbar-header {
+  background: #01c0c8;
+}
+.navbar-top-links > li > a {
+  color: #ffffff;
+}
+/*Right panel*/
+.right-sidebar .rpanel-title {
+  background: #01c0c8;
+}
+/*Bread Crumb*/
+.bg-title .breadcrumb .active {
+  color: #01c0c8;
+}
+/*Sidebar*/
+.sidebar {
+  background: #fff;
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+}
+.sidebar .label-custom {
+  background: #01c0c8;
+}
+#side-menu li a {
+  color: #54667a;
+}
+#side-menu li a {
+  color: #54667a;
+  border-left: 0px solid #fff;
+}
+.nav-second-level > li > a:hover,
+.nav-second-level > li > a:focus {
+  background-color: #f7fafc !important;
+}
+#side-menu > li > a:hover,
+#side-menu > li > a:focus {
+  background-color: #f7fafc !important;
+}
+#side-menu > li > a.active {
+  border-bottom: 2px solid #01c0c8;
+  color: #2b2b2b;
+  font-weight: 500;
+}
+#side-menu > li > a.active i {
+  color: #01c0c8;
+}
+#side-menu ul > li > a:hover {
+  color: #01c0c8;
+  background: none;
+}
+#side-menu ul > li > a.active {
+  color: #2b2b2b;
+  font-weight: 500;
+}
+.sidebar #side-menu .user-pro .nav-second-level a:hover {
+  color: #01c0c8;
+}
+.fix-sidebar .top-left-part {
+  background: #01c0c8;
+}
+#side-menu .nav-second-level li:hover > a {
+  color: #01c0c8;
+}
+/*themecolor*/
+.bg-theme {
+  background-color: #fb9678 !important;
+}
+.bg-theme-dark {
+  background-color: #01c0c8 !important;
+}
+/*Chat widget*/
+.chat-list .odd .chat-text {
+  background: #01c0c8;
+}
+/*Button*/
+.btn-custom {
+  background: #01c0c8;
+  border: 1px solid #01c0c8;
+  color: #ffffff;
+}
+.btn-custom:hover {
+  background: #01c0c8;
+  opacity: 0.8;
+  color: #ffffff;
+  border: 1px solid #01c0c8;
+}
+/*Custom tab*/
+.customtab li.active a,
+.customtab li.active a:hover,
+.customtab li.active a:focus {
+  border-bottom: 2px solid #01c0c8;
+  color: #01c0c8;
+}
+.tabs-vertical li.active a,
+.tabs-vertical li.active a:hover,
+.tabs-vertical li.active a:focus {
+  background: #01c0c8;
+  border-right: 2px solid #01c0c8;
+}
+/*Nav-pills*/
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+  background: #01c0c8;
+  color: #ffffff;
+}

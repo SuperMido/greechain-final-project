@@ -1,0 +1,5 @@
+/greechain-ethereum/node_modules/*
+/greechain-ethereum/build/*
+node_modules/*
+.idea/*
+.vscode/*
